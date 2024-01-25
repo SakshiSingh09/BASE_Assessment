@@ -11,9 +11,9 @@ function App() {
     <div className="App">
        <Routes>
           <Route path='/' exact element={<SignInPage />}/>
-          <Route path='user-page' element={<UserPage />}>
-            <Route path='not-found' element={<NotFoundPage />}/>
-            <Route path='not-found' element={<MainSection />}/>
+          <Route path='user-page' exact element={<UserPage />}>
+              <Route path='not-found' element={<NotFoundPage />}/>
+              <Route path='upload' element={<MainSection />}/>
           </Route>
        </Routes>
     </div>

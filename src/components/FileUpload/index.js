@@ -12,7 +12,6 @@ const FileUpload = () => {
   const [removeFile, setRemoveFile] = useState(false);
   const [isUploaded, setUpload] = useState(false);
   const [isButtonDisabled, setButtonDisabled] = useState(false);
-  // const [tableContent, setTableContent] = useState(null);
 
   const handleDrop = (event) => {
     event.preventDefault();

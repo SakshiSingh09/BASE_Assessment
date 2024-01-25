@@ -1,9 +1,8 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import Logo from '../Logo';
 import Navbar from '../Navbar';
 import './styles.scss'
-import MainSection from '../MainSection'
 
 const UserPage = () => {
   return (
@@ -12,12 +11,7 @@ const UserPage = () => {
             <Logo />
             <Navbar />
         </div>
-        <MainSection />
-        {/* <Routes>
-            <Route path='upload' element={<MainSection />}/>
-            <Route path='not-found' element={<NotFoundPage />}/>
-        </Routes> */}
-         
+        <Outlet />         
     </div>
   )
 }
