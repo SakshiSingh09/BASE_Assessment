@@ -1,0 +1,21 @@
+.logo{
+    display: flex;
+    flex-direction: row;
+    height: 42px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+
+    &__image{
+        width: 42px;
+        height: 42px;
+    }
+
+    &__title{
+        font-family: 'Nunito', sans-serif;
+        font-size: 24px;
+        line-height: 32.74px;
+        font-weight: 600;
+        color: #030229;
+    }
+}

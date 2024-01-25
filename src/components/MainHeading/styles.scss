@@ -1,0 +1,36 @@
+.main-page{
+   
+    &__header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 30px;
+
+        &__text{
+            width: 90%;
+            font-size: 24px;
+            line-height: 32px;
+            font-family: 'Figtree', sans-serif;
+            font-weight: 600;
+        }
+
+        &__searchbar{
+            width: 10%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            &__notification-bell{
+                width: 18px;
+                height: 23px;
+            }
+
+            &__profile-img{
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}

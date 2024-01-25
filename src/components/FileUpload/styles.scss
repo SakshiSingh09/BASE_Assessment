@@ -1,0 +1,96 @@
+.form{
+    width: 596px;
+    height: 367px;
+    position: absolute;
+    top: 218px;
+    left: 518px;
+    padding: 15px;
+    background: var(--white--theme--background--color);
+    border-radius: 8px;
+    font-family: 'Nunito', sans-serif;
+
+    &__wrapper{
+
+        width: 564px;
+        height: 280px;
+        border:  2px dashed #cccccc;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+
+        &__content{
+            width: 267px;
+            height: 76px;
+            position: absolute;
+            top: 114px;
+            left: 165px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            &__image{
+                width: 30px;
+                height: 28px;
+            }
+
+            &__placeholder-content{
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                font-family: 'Figtree', sans-serif;
+                font-weight: 400;
+
+                &__placeholder{
+                    line-height: 24px;
+                    font-size: 16px;
+                    align-items: center;
+                    color: #999CA0;
+                }
+
+                &__remove-btn{
+                    background-color: var(--white--theme--background--color);
+                    font-weight: 400;
+                    border: none;
+                    margin-top: 20px;
+                    cursor: pointer;
+                    color: #D33030;
+                    font-size: 14pxx;
+                    line-height: 24px;
+                }
+            }
+
+        }
+    }
+
+
+    &__button{
+
+        &__submit{
+            width: 564px;
+            height: 48px;
+            border-radius: 8px;
+            padding: 8px 16px 8px 8px;
+            color: #ffffff;
+            background: var(--blue--theme--main--color);
+            margin-top: 10px;
+            border: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+           
+
+            &__icon{
+                width: 14px;
+                height: 14px;
+                color: #ffffff;
+                margin-right: 5px;
+            }
+        }
+        
+        }
+   }

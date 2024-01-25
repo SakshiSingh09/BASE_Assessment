@@ -1,0 +1,22 @@
+.main-section-error-page{
+    position: relative;
+    width: 100%;
+    height: 1047px;
+    padding: 0 20px;
+    background: var(--mainpage-background--color);
+
+    &__not-found{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 218px;
+        left: 518px;
+
+        &__error-status{
+            font-size: 200px;
+            color: var(--blue--theme--main--color );
+        }
+    }
+}
