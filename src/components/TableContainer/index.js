@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import x from '../assets/images/x.png';
+import x from '../../assets/images/x.png';
 
 const TableContainer = ({ data, containerName }) => {
     const [selectedOptions, setSelectedOptions] = useState([]);

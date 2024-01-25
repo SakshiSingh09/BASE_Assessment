@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './styles.scss';
-import TableContainer from '../../TableContainer';
+import TableContainer from '../TableContainer';
 
 const UploadedData = ({ excelData }) => {
     
