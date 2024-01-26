@@ -4,9 +4,14 @@ import x from '../../assets/images/x.png';
 
 const TableContainer = ({ data, containerName }) => {
     const [selectedOptions, setSelectedOptions] = useState([]);
+    const [selectedValue, setSelectedValue] = useState('Select Tags');
     const handleSelectChange = (event) => {
         const selectedOption = event.target.value;
     
+        if(selectedOption !== 'Select Tags'){
+            setSelectedValue('Select Tags');
+        }
+
         setSelectedOptions((prevSelectedOptions) => {
           const newSet = new Set(prevSelectedOptions);
           newSet.add(selectedOption);
@@ -28,12 +33,12 @@ const TableContainer = ({ data, containerName }) => {
         <td>{data[2]}</td>
         <td className='uploaded__content__table__table-content__dropdown'>
             <label htmlFor={`${containerName}-select`} style={{display:'none'}}>Select Options:</label>
-            <select id={`${containerName}-select`} selected='Select Tags' onChange={handleSelectChange}>
-                <option value="" selected disabled hidden>Select Tags</option>
+            <select id={`${containerName}-select`} value={selectedValue} onChange={handleSelectChange}>
+                <option value="Select Tags" selected disabled hidden>Select Tags</option>
                     {
                         (data[3].split(",")).map((item,i) => {
                             return(
-                                <option value={item} key={i}>{item}</option>
+                                <option key={i}>{item}</option>
                             )
                         })
                     }

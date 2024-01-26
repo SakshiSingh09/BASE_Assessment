@@ -34,17 +34,15 @@ const FileUpload = () => {
         const data = new Uint8Array(e.target.result);
         const workbook = XLSX.read(data, { type: 'array' });
 
-        // Assuming the first sheet is the one you want to read
         const sheetName = workbook.SheetNames[0];
         const sheet = workbook.Sheets[sheetName];
 
-        // Convert sheet data to JSON
         const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
-        setExcelData(jsonData);
         console.log(isUploaded);
         setDroppedFile(null);
         setUpload(true);
         setTimeout(() => {
+          setExcelData(jsonData);
           setUpload(false);
           setButtonDisabled(true);
         }, 1000);
@@ -60,7 +58,6 @@ const FileUpload = () => {
     setButtonDisabled(false);
     setDroppedFile(file);
     setExcelData(null);
-    //handleFileUpload(file);
   };
 
   return (

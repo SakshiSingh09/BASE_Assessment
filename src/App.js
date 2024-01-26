@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import './App.css';
 import SignInPage from './components/SignInPage';
 import UserPage from './components/UserPage';
 import NotFoundPage from './components/NotFoundPage';

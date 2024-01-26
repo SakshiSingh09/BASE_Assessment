@@ -55,7 +55,7 @@ const SignInPage = () => {
                 <input type='password' alt='••••••••' value='••••••••' disabled/>
               </div>          
               <p>Forgot Password?</p>
-              <Link to='/user-page'>
+              <Link to='/user-page/upload'>
                 <button type='submit'>Sign In</button>
               </Link>
             </div>

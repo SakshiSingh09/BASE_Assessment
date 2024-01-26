@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:display=swap');
 
 .signin-page{
     width: 100%;
@@ -164,6 +165,7 @@
                     p{
                         color: var(--blue--theme--main--color);
                         margin-bottom: 30px;
+                        cursor: pointer;
                     }
     
                     button{
@@ -188,9 +190,133 @@
                     color: #858585;
                     span{
                         color: var(--blue--theme--main--color);
+                        cursor: pointer;
                     }
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 360px){
+    .signin-page{
+        width: 360px;
+        height: 770px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__left-section{
+            height: 120px;
+            width: 100%;
+            background-color: var(--blue--theme--main--color);
+            border: none;
+
+            &__logo{
+
+                &__base-main{
+                    position: absolute;
+                    top: 27px;
+                    left: 20px;
+                    width: 26px;
+                    height: 26px;
+                }
+    
+                &__base-extract{
+                    position: absolute;
+                    width: 27px;
+                    height: 7.15px;
+                    top: 36.5px;
+                    left: 19.35px;
+                }
+            }
+
+            &__heading{
+                position: absolute;
+                top: 27px;
+                left: 57px;
+                font-size: 20px;
+                line-height: 27.28px;
+                font-family: 'Nunito', sans-serif;
+                color: #ffffff;
+                font-weight: 200;
+            }
+
+            &__contacts-frame{
+                position: absolute;
+                top: 724px;
+                left: 97px;
+                width: 166px;
+                height: 30px;
+
+                img{
+                    width: 28px;
+                    height: 28px;
+                    filter: contrast(0);
+                }
+            }
+        }
+        
+        &__right-section{
+            width: 360px;
+
+            &__signin-form{
+                position: absolute;
+                top: 109px;
+                left: 16px;
+                width: 328px;
+
+                &__heading{
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+    
+                &__sub-heading{
+                    font-size: 12px;
+                    line-height: 14.4px;
+                    margin-top: 10px;
+                }
+                
+                &__accounts{
+
+                    &__icon{
+                        width: 153.35px;
+                    }
+                }
+
+                &__form{
+                    width: 328px;
+                    height: 430px;
+
+                    &__container{
+
+                        padding: 25.56px;                        
+
+                        &__form-content{
+                            
+                            input{
+                                width: 276.88px;
+                            }
+                        }
+                    }
+
+                    button{
+                        width: 276.88px;
+                    }
+
+                    &__register-text{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        height: 54px;
+                    }
+                }
+
+            }
+            
+        }
+
     }
 }

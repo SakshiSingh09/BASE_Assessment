@@ -7,9 +7,9 @@ const UploadedData = ({ excelData }) => {
 
   return (
     <div className='uploaded'>
+        <h2 className='uploaded__heading'>Uploads</h2>
         {excelData && (
           <div className='uploaded__content'>
-            <h2 className='uploaded__content__heading'>Uploads</h2>
             <table className='uploaded__content__table'>
                 <thead>
                     <tr className='uploaded__content__table__table-heading'>

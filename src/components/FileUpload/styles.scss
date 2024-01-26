@@ -94,3 +94,45 @@
         
         }
    }
+
+@media screen and (max-width: 360px){
+    .form{
+        width: 328px;
+        height: 352px;
+        top: 190px;
+        left: 16px;
+
+        &__wrapper{
+            width: 296px;
+            height: 258px;
+
+            &__content{
+                width: 182px;
+                height: 76px;
+                top: 107px;
+                left: 73px;
+
+                &__placeholder-content{
+
+                    &__placeholder{
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+
+                    &__remove-btn{
+                        margin-top: 0;
+                    }
+                }
+            }
+
+        }
+
+        &__button{
+
+            &__submit{
+                width: 296px;
+                height: 46px;
+            }
+        }
+    }
+}
