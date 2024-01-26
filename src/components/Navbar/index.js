@@ -6,7 +6,7 @@ import Chart from '../../assets/images/Chart.png';
 import Document from '../../assets/images/Document.png';
 import Notification from '../../assets/images/Notification.png';
 import Ticket from '../../assets/images/Ticket.png';
-import Subtract from '../../assets/images/Subtract.png';
+import Logo from '../../assets/images/Logo.png';
 import x from '../../assets/images/x.png';
 import './styles.scss';
 import { Link } from 'react-router-dom';
@@ -17,7 +17,7 @@ const Navbar = ({ navbarStatus, openSidebar }) => {
     <nav className={navbarStatus ? 'navbar navbar--open' : 'navbar'}>
         <div className='navbar__icon'>
             <div className='navbar__icon__left'>
-                <img src={Subtract} alt='logo-img' className='navbar__icon__left__logo-image'/>
+                <img src={Logo} alt='logo-img' className='navbar__icon__left__logo-image'/>
                 <p className='navbar__icon__left__title'>Base</p> 
             </div> 
             <div  className='navbar__icon__right'>

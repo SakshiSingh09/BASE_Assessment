@@ -1,5 +1,5 @@
 import React from 'react'
-import Subtract from '../../assets/images/Subtract.png';
+import Logos from '../../assets/images/Logo.png';
 import Tab from '../../assets/images/Tab_Bar.png';
 import NotificationBell from '../../assets/images/Vector.png';
 import UserLogo from '../../assets/images/Mask Group.png'
@@ -11,7 +11,7 @@ const Logo = ({ openSidebar }) => {
     <div className='main-heading'>
       <div className='main-heading__logo'>
         <img src={Tab} alt='tab-img' className='main-heading__logo__tabs-img' onClick={openSidebar}/>    
-        <img src={Subtract} alt='logo-img' className='main-heading__logo__image'/>
+        <img src={Logos} alt='logo-img' className='main-heading__logo__image'/>
         <p className='main-heading__logo__title'>Base</p>      
       </div>
       <div className='main-heading__searchbar'>
