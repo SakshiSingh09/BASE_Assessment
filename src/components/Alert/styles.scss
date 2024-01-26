@@ -1,0 +1,27 @@
+.alert{
+    position: absolute;
+    top: 10px;
+    left: 518px;
+    width: 596px;
+    height: 30px;
+    padding: 7px;
+    background-color: var(--blue--theme--main--color);
+    border-radius: 2px;
+    opacity: 0.8;
+
+    &__message{
+        color: var(--table--background--color);
+        font-size: 14px;
+        font-family: 'Figtree', sans-serif;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .alert{
+        width: 328px;
+        top: 0;
+        left: 16px;
+        z-index: 4;
+    }
+}

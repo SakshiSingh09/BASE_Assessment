@@ -33,28 +33,30 @@ const TableContainer = ({ data, containerName }) => {
         <td>{data[2]}</td>
         <td className='uploaded__content__table__table-content__dropdown'>
             <label htmlFor={`${containerName}-select`} style={{display:'none'}}>Select Options:</label>
-            <select id={`${containerName}-select`} value={selectedValue} onChange={handleSelectChange}>
-                <option value="Select Tags" selected disabled hidden>Select Tags</option>
+            <select id={`${containerName}-select`} value={selectedValue} onChange={handleSelectChange} className='uploaded__content__table__table-content__dropdown__select'>
+                <option value="Select Tags" selected disabled hidden className='uploaded__content__table__table-content__dropdown__select__option'>Select Tags</option>
                     {
                         (data[3].split(",")).map((item,i) => {
                             return(
-                                <option key={i}>{item}</option>
+                                <option key={i} className='uploaded__content__table__table-content__dropdown__select__option'>{item}</option>
                             )
                         })
                     }
             </select>
         </td>
         <td className='uploaded__content__table__table-content__selected-tags_list'>
-            {
-                selectedOptions.map((item,index) => {
-                    return(
-                        <span>
-                            <p key={index}>{item}</p>
-                            <img src={x} alt='cross-icon' onClick={() => handleRemoveOptions(item)}/>
-                        </span>
-                    )
-                 })
-            }
+            <div className='uploaded__content__table__table-content__selected-tags_list__wrapper'>
+                {
+                    selectedOptions.map((item,index) => {
+                        return(
+                            <span>
+                                <p key={index}>{item}</p>
+                                <img src={x} alt='cross-icon' onClick={() => handleRemoveOptions(item)}/>
+                            </span>
+                        )
+                    })
+                }
+            </div>
         </td>
     </tr>
   )

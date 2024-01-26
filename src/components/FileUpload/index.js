@@ -5,6 +5,7 @@ import './styles.scss'
 import Microsoft_Office_Excel from '../../assets/images/Microsoft_Office_Excel.png';
 import UploadedData from '../UploadedData';
 import Load from '../../assets/images/Load.png'
+import Alert from '../Alert';
 
 const FileUpload = () => {
   const [excelData, setExcelData] = useState(null);
@@ -12,6 +13,7 @@ const FileUpload = () => {
   const [removeFile, setRemoveFile] = useState(false);
   const [isUploaded, setUpload] = useState(false);
   const [isButtonDisabled, setButtonDisabled] = useState(false);
+  const [alert, setAlert] = useState(false);
 
   const handleDrop = (event) => {
     event.preventDefault();
@@ -33,6 +35,7 @@ const FileUpload = () => {
       reader.onload = (e) => {
         const data = new Uint8Array(e.target.result);
         const workbook = XLSX.read(data, { type: 'array' });
+        console.log(workbook);
 
         const sheetName = workbook.SheetNames[0];
         const sheet = workbook.Sheets[sheetName];
@@ -40,12 +43,21 @@ const FileUpload = () => {
         const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
         console.log(isUploaded);
         setDroppedFile(null);
-        setUpload(true);
-        setTimeout(() => {
-          setExcelData(jsonData);
-          setUpload(false);
-          setButtonDisabled(true);
-        }, 1000);
+        if(jsonData.length > 1){
+          setUpload(true);
+          setTimeout(() => {
+            setExcelData(jsonData);
+            setUpload(false);
+            setButtonDisabled(true);
+          
+          }, 1000); 
+        }else{
+          setAlert(true);
+          setTimeout(() => {
+            setAlert(false);
+          },3000);
+        }
+        
       };
 
       reader.readAsArrayBuffer(droppedFile);
@@ -62,6 +74,9 @@ const FileUpload = () => {
 
   return (
     <>
+      {
+        alert && <Alert />
+      }
       <div className='form'>
         <div className='form__wrapper' onDrop={handleDrop} onDragOver={(event) => event.preventDefault()}>
           <div className='form__wrapper__content'>
