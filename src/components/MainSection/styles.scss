@@ -3,7 +3,7 @@
     background: var(--mainpage-background--color);
   }
 
-@media screen and (max-width: 360px){
+@media only screen and (max-width: 360px){
   .main-section{
     height: 1047px;
   }

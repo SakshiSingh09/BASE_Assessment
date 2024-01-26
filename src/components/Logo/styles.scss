@@ -59,7 +59,7 @@
 }
 
 
-@media screen and (max-width: 360px){
+@media only screen and (max-width: 360px){
     .main-heading{
         position: fixed;
         z-index: 1;

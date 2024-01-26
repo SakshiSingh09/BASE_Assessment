@@ -198,7 +198,7 @@
     }
 }
 
-@media screen and (max-width: 360px){
+@media only screen and (max-width: 360px){
     .signin-page{
         width: 360px;
         height: 770px;
