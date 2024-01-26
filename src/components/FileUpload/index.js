@@ -35,13 +35,10 @@ const FileUpload = () => {
       reader.onload = (e) => {
         const data = new Uint8Array(e.target.result);
         const workbook = XLSX.read(data, { type: 'array' });
-        console.log(workbook);
-
         const sheetName = workbook.SheetNames[0];
         const sheet = workbook.Sheets[sheetName];
 
         const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
-        console.log(isUploaded);
         setDroppedFile(null);
         if(jsonData.length > 1){
           setUpload(true);

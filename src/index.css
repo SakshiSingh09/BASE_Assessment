@@ -17,3 +17,10 @@
     --table--background--color: #F5F5F5;
     --signin--right--page--background--color: #F8FAFF;
 }
+
+body{
+    overflow: scroll;
+}
+::-webkit-scrollbar{
+    display: none;
+}
